@@ -1170,8 +1170,13 @@ window.onscroll = () => {
     })
 }
 
+menu.addEventListener("click", function () {
+    navbar.classList.toggle("active");
+});
 
-
+window.onscroll = () => {
+    navbar.classList.remove("active");
+};
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
