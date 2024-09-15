@@ -704,22 +704,24 @@ span {
         position: absolute;
         top: 100%;
         right: 0;
-        width: 50%;
+        width: 100%;
         padding: 1rem 3%;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(20px);
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
-        display: none;
+        display: inline-block;
+        max-width: 80px;
     }
 
     .navbar .active {
-        display: flex;
+        display: inline-block;
+        position: absolute;
     }
 
     .navbar a {
-        display: flex;
+        display: block;
         font-size: 2rem;
         margin: 3rem 0;
         color: white;
@@ -763,8 +765,6 @@ span {
         <a href="#home" class="logo">Clementine
         <span>Calmets</span></a>
     
-            <i class="bx bx-menu" id="menu-icon"></i>
-
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#education">Education</a>
@@ -1151,7 +1151,8 @@ span {
         </p>
     </footer>
 
-    <script src="script.resume.js">let menuIcon = document.querySelector('#menu-icon');
+    <script src="script.resume.js">
+let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
 let navlinks = document.querySelectorAll('header nav a');
@@ -1166,7 +1167,7 @@ window.onscroll = () => {
         if(top >= offset && top < offset + height){
             navlinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a [href*=' + id + ' ]').classList.add('active');
+                document.querySelector('header nav a [href*=' + id + ' ]') + .classList.add('active');
             })
         }
     })
@@ -1183,6 +1184,7 @@ window.onscroll = () => {
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-}</script>
+}
+    </script>
 </body>
 </html>
