@@ -1231,6 +1231,33 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form data
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
+    
+    // Recipient email address
+    $to = 'cece.calmets@yahoo.com';
+    
+    // Email subject
+    $subject = 'New Message from Contact Form';
+    
+    // Email body
+    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+    
+    // Email headers
+    $headers = "From: $email";
+    
+    // Send email
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Email sent successfully.";
+    } else {
+        echo "Failed to send email.";
+    }
+} else {
+    echo "Invalid request.";
+}
     </script>
 </body>
 </html>
