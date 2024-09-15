@@ -74,7 +74,9 @@ header {
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
-
+.minigame{
+    display: none;
+}
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
@@ -700,6 +702,9 @@ span {
         display: block;
     }
 
+    .minigame{
+        display: block;
+    }
     .navbar {
         position: absolute;
         top: 100%;
@@ -769,7 +774,7 @@ span {
 
         <div class="menu-icon">
             <i class="bx bx-menu" id="menu-icon"></i>
-                <a href="https://cececalmets.github.io/MiniGame/Index.Asteroids.html">Mini Game</a>
+                <a class="miniGame" href="https://cececalmets.github.io/MiniGame/Index.Asteroids.html">Mini Game</a>
         </div>
         
         <nav class="navbar">
