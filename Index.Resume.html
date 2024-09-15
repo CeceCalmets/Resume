@@ -704,20 +704,19 @@ span {
         position: absolute;
         top: 100%;
         right: 0;
-        width: 100%;
+        width: 50%;
         padding: 1rem 3%;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(20px);
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
-        display: inline-block;
-        max-width: 80px;
+        display: none;
     }
 
     .navbar .active {
-        display: inline-block;
-        position: absolute;
+        display: block;
+
     }
 
     .navbar a {
@@ -764,7 +763,9 @@ span {
     <header class="header">
         <a href="#home" class="logo">Clementine
         <span>Calmets</span></a>
-    
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+        
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#education">Education</a>
@@ -1167,7 +1168,7 @@ window.onscroll = () => {
         if(top >= offset && top < offset + height){
             navlinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a [href*=' + id + ' ]') + .classList.add('active');
+                document.querySelector('header nav a [href*=' + id + ' ]').classList.add('active');
             })
         }
     })
