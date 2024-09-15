@@ -75,14 +75,11 @@ header {
     border-bottom: 3px solid transparent;
 }
       
-.minigame{
-    display: none;
-    position: none;
-    font-size: 0;
-}
+
       
 .navbar a:hover,
-.navbar a.active {
+.navbar a.active,
+      .minigame{
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
@@ -98,6 +95,11 @@ header {
     display: none;
 }
 
+      .minigame{
+    display: none;
+    position: none;
+    font-size: 0;
+}
 section {
     min-height: 100vh;
     padding: 10rem 12% 10rem;
