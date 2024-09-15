@@ -1137,21 +1137,21 @@ span {
     <section class="contact" id="contact">
         <h2 class="heading">Contact<span>Me</span></h2>
 
-        <form action="send_cece.calmets@yahoo.com" method="POST" 
+        <form action="send_cece.calmets@yahoo.php" method="POST" 
             enctype="multipart/form-data" name="EmailForm">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="name" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email" required>
+                    <input for="name" id="name" type="name" placeholder="Full Name" required>
+                    <input for="email" id="email" type="email" placeholder="Email" required>
                 </div>
                 <div class="input-box">
-                    <input type="number" placeholder="Phone Number" required>
+                    <input  type="number" placeholder="Phone Number" required>
                     <input type="text" placeholder="Subject">
                 </div>
             </div>
 
             <div class="input-group-2">
-                <textarea name="message" id="" cols="30" rows="10" 
+                <textarea id="message" for="message" name="message" id="" cols="30" rows="10" 
                 placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
             </div>
@@ -1230,7 +1230,7 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
-
+//Contact Me 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
     $name = htmlspecialchars($_POST['name']);
