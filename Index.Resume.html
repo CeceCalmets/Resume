@@ -83,7 +83,7 @@ header {
 .nminiGame,
 .menu-icon {
     font-size: 1.8rem;
-    color: var(--text-color);
+    color: Gold;
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease;
@@ -1176,7 +1176,7 @@ span {
     </footer>
 
     <script>
-let menuIcon = document.querySelector('#menu-icon');
+let menuIcon = document.querySelector('.menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
 let navlinks = document.querySelectorAll('header nav a');
@@ -1198,7 +1198,7 @@ window.onscroll = () => {
     })
 }
 
-menu.addEventListener("click", function() {
+menuIcon.addEventListener("click", function() {
     navbar.classList.toggle("active");
 });
 
